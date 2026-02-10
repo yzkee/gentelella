@@ -58,6 +58,77 @@ Gentelella is a powerful, free-to-use Bootstrap 5 admin template that has been c
 - **After**: 79 KB initial load + smart chunk loading
 - **Result**: **90% smaller initial bundle** with **40-70% faster page loads**
 
+## Premium Dashboards from DashboardPack
+
+Loved Gentelella? Supercharge your workflow with our premium templates on [DashboardPack](https://dashboardpack.com/?utm_source=github&utm_medium=readme&utm_campaign=gentelella) — built for production, backed by dedicated support.
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/tailpanel/?utm_source=github&utm_medium=readme&utm_campaign=gentelella">
+        <img src="screenshots/tailpanel.png" alt="TailPanel — cutting-edge React admin dashboard styled with Tailwind CSS" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/tailpanel/?utm_source=github&utm_medium=readme&utm_campaign=gentelella"><strong>TailPanel</strong></a>
+      <br>
+      <sub>React + TypeScript + Tailwind CSS. 9 dashboards, dark/light themes, blazing fast with Vite.</sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/admindek-html/?utm_source=github&utm_medium=readme&utm_campaign=gentelella">
+        <img src="screenshots/admindek.png" alt="Admindek — comprehensive Bootstrap 5 admin template with theme customizer" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/admindek-html/?utm_source=github&utm_medium=readme&utm_campaign=gentelella"><strong>Admindek</strong></a>
+      <br>
+      <sub>Bootstrap 5 + vanilla JS. 100+ components, theme customizer, RTL, 10 color palettes.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/adminty-html-dashboard/?utm_source=github&utm_medium=readme&utm_campaign=gentelella">
+        <img src="screenshots/adminty.png" alt="Adminty — feature-packed Bootstrap admin with 160+ application pages" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/adminty-html-dashboard/?utm_source=github&utm_medium=readme&utm_campaign=gentelella"><strong>Adminty</strong></a>
+      <br>
+      <sub>Bootstrap 5. 160+ pages covering analytics, apps, forms, and data visualization.</sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/?utm_source=github&utm_medium=readme&utm_campaign=gentelella">
+        <img src="screenshots/architectui.png" alt="ArchitectUI — full-stack admin UI system with 250+ integrated widgets" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/?utm_source=github&utm_medium=readme&utm_campaign=gentelella"><strong>ArchitectUI</strong></a>
+      <br>
+      <sub>Bootstrap 5. 250+ integrated widgets, plug-and-play architecture, 9 dashboards.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/kero-jquery-html-dashboard-pro/?utm_source=github&utm_medium=readme&utm_campaign=gentelella">
+        <img src="screenshots/kero.png" alt="Kero — polished admin template with dual layout and Webpack integration" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/kero-jquery-html-dashboard-pro/?utm_source=github&utm_medium=readme&utm_campaign=gentelella"><strong>Kero</strong></a>
+      <br>
+      <sub>Bootstrap 5 + Webpack. Dual layout system (horizontal + sidebar), SASS customization.</sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/cryptocurrency-dashboard/?utm_source=github&utm_medium=readme&utm_campaign=gentelella">
+        <img src="screenshots/cryptocurrency.png" alt="Cryptocurrency Dashboard — specialized admin for blockchain and token projects" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/cryptocurrency-dashboard/?utm_source=github&utm_medium=readme&utm_campaign=gentelella"><strong>Cryptocurrency Dashboard</strong></a>
+      <br>
+      <sub>Bootstrap. Specialized for blockchain projects, token sales, and crypto portfolio management.</sub>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <a href="https://dashboardpack.com/?utm_source=github&utm_medium=readme&utm_campaign=gentelella"><strong>Get Premium Templates on DashboardPack</strong></a>
+</p>
+
 ## 🚀 Quick Start
 
 ### Prerequisites

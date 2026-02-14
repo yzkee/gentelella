@@ -1,3 +1,9 @@
+---
+layout: default
+title: Bundle Analysis
+nav_order: 9
+---
+
 # Bundle Analysis Guide
 
 This guide explains how to use the bundle analyzer to monitor and optimize the bundle size of the Gentelella admin template.

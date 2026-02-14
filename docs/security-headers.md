@@ -1,3 +1,9 @@
+---
+layout: default
+title: Security Headers
+nav_order: 11
+---
+
 # Security Headers Implementation Guide
 
 This guide explains how to implement security headers for the Gentelella admin template, including which headers can be set via meta tags and which require server configuration.

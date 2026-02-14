@@ -618,10 +618,10 @@ Create `.prettierrc`:
 
 ## Next Steps
 
-- **[Components Guide]({{ site.baseurl }}/docs/components/)** - Explore all available components
-- **[Customization Guide]({{ site.baseurl }}/docs/customization/)** - Advanced customization techniques
-- **[Performance Guide]({{ site.baseurl }}/docs/performance/)** - Optimization strategies
-- **[Deployment Guide]({{ site.baseurl }}/docs/deployment/)** - Deploy to production
+- **[Components Guide]({{ site.baseurl }}/components/)** - Explore all available components
+- **[Customization Guide]({{ site.baseurl }}/customization/)** - Advanced customization techniques
+- **[Performance Guide]({{ site.baseurl }}/performance/)** - Optimization strategies
+- **[Deployment Guide]({{ site.baseurl }}/deployment/)** - Deploy to production
 
 ---
 

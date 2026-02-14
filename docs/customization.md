@@ -1478,9 +1478,9 @@ window.GentelellaPlugins.registerPlugin('notifications', NotificationPlugin);
 
 ## Next Steps
 
-- **[API Integration]({{ site.baseurl }}/docs/api-integration/)** - Connect with backend APIs
-- **[Security Guide]({{ site.baseurl }}/docs/security/)** - Implement security best practices
-- **[Testing Guide]({{ site.baseurl }}/docs/testing/)** - Test your customizations
+- **[API Integration]({{ site.baseurl }}/api-integration/)** - Connect with backend APIs
+- **[Components Guide]({{ site.baseurl }}/components/)** - Available component reference
+- **[Deployment Guide]({{ site.baseurl }}/deployment/)** - Deploy your customizations
 
 ---
 

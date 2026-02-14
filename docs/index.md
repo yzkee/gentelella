@@ -104,24 +104,25 @@ yarn add gentelella
 ## Technology Stack
 
 ### Core Technologies
-- **Bootstrap 5.3.7** - CSS Framework
-- **Vite 6.3.5** - Build Tool  
-- **SASS** - CSS Preprocessor
-- **jQuery 3.6.1** - DOM Manipulation*
 
-*jQuery is being phased out in favor of vanilla JavaScript
+- **Bootstrap 5.3** - CSS Framework
+- **Vite** - Build Tool with code splitting
+- **SASS** - CSS Preprocessor
+- **Vanilla JavaScript** - jQuery-free DOM manipulation
 
 ### Chart Libraries
-- **Chart.js 4.5.0** - Modern responsive charts
-- **Morris.js** - Time-series line graphs
-- **jVectorMap** - Interactive world maps
-- **Gauge.js** - Beautiful animated gauges
 
-### Form Libraries
-- **Select2** - Enhanced dropdown selections
+- **Chart.js** - Modern responsive charts
+- **ECharts** - Advanced data visualization
+- **Leaflet** - Interactive maps
+
+### Form & UI Libraries
+
+- **Choices.js** - Enhanced dropdown selections
 - **Tempus Dominus** - Bootstrap 5 date/time picker
-- **Ion.RangeSlider** - Advanced range controls
+- **nouislider** - Range slider controls
 - **DataTables** - Advanced table functionality
+- **FullCalendar** - Interactive calendar
 
 ---
 

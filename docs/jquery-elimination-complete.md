@@ -1,4 +1,10 @@
-# Complete jQuery Elimination Achievement 🎉
+---
+layout: default
+title: jQuery Elimination
+nav_order: 10
+---
+
+# Complete jQuery Elimination Achievement
 
 ## Executive Summary
 

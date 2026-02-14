@@ -978,9 +978,9 @@ export default defineConfig({
 
 ## Next Steps
 
-- **[Monitoring Setup]({{ site.baseurl }}/docs/monitoring/)** - Set up comprehensive monitoring
-- **[Security Guide]({{ site.baseurl }}/docs/security/)** - Implement security best practices
-- **[API Integration]({{ site.baseurl }}/docs/api-integration/)** - Connect with backend APIs
+- **[Performance Guide]({{ site.baseurl }}/performance/)** - Optimize for production
+- **[Configuration]({{ site.baseurl }}/configuration/)** - Environment-specific settings
+- **[API Integration]({{ site.baseurl }}/api-integration/)** - Connect with backend APIs
 
 ---
 

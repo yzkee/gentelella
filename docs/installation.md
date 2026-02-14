@@ -336,10 +336,10 @@ If you encounter issues not covered here:
 
 After successful installation:
 
-1. **[Configuration Guide]({{ site.baseurl }}/docs/configuration/)** - Customize the template
-2. **[Components Overview]({{ site.baseurl }}/docs/components/)** - Explore available components
-3. **[Performance Guide]({{ site.baseurl }}/docs/performance/)** - Optimize your build
-4. **[Customization]({{ site.baseurl }}/docs/customization/)** - Add your own styles and features
+1. **[Configuration Guide]({{ site.baseurl }}/configuration/)** - Customize the template
+2. **[Components Overview]({{ site.baseurl }}/components/)** - Explore available components
+3. **[Performance Guide]({{ site.baseurl }}/performance/)** - Optimize your build
+4. **[Customization]({{ site.baseurl }}/customization/)** - Add your own styles and features
 
 ---
 

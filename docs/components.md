@@ -826,10 +826,10 @@ $('.fancybox').fancybox({
 
 ## Next Steps
 
-- **[Customization Guide]({{ site.baseurl }}/docs/customization/)** - Learn how to customize these components
-- **[Performance Guide]({{ site.baseurl }}/docs/performance/)** - Optimize component loading
-- **[API Reference]({{ site.baseurl }}/docs/api/)** - Detailed API documentation
-- **[Examples]({{ site.baseurl }}/docs/examples/)** - See components in action
+- **[Customization Guide]({{ site.baseurl }}/customization/)** - Learn how to customize these components
+- **[Performance Guide]({{ site.baseurl }}/performance/)** - Optimize component loading
+- **[API Integration]({{ site.baseurl }}/api-integration/)** - Connect components with backend APIs
+- **[Configuration]({{ site.baseurl }}/configuration/)** - Configure component defaults
 
 ---
 

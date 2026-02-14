@@ -1272,9 +1272,9 @@ export const requestBatcher = new RequestBatcher();
 
 ## Next Steps
 
-- **[Security Guide]({{ site.baseurl }}/docs/security/)** - Implement security best practices
-- **[Testing Guide]({{ site.baseurl }}/docs/testing/)** - Test your API integrations
-- **[Monitoring Guide]({{ site.baseurl }}/docs/monitoring/)** - Monitor API performance
+- **[Deployment Guide]({{ site.baseurl }}/deployment/)** - Deploy to production
+- **[Performance Guide]({{ site.baseurl }}/performance/)** - Optimize API performance
+- **[Configuration]({{ site.baseurl }}/configuration/)** - Environment-specific settings
 
 ---
 

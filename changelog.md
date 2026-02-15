@@ -1,5 +1,53 @@
 # Gentelella Changelog
 
+## 2.1.5 - 15.02.2026
+
+**Documentation Overhaul & jQuery Cleanup Release**
+
+### Documentation Site Fixes
+
+- **GitHub Pages Deployment**: Fixed broken Jekyll documentation site at colorlibhq.github.io/gentelella
+  - Rewrote GitHub Actions workflow to build from `docs/` directory instead of repo root
+  - Bumped Ruby from 3.1 to 3.3 to resolve Bundler compatibility failure
+  - Fixed base URL from `puikinsh.github.io` to `colorlibhq.github.io`
+  - Removed orphaned `docs/.github/workflows/pages.yml` (GitHub only discovers workflows at repo root)
+
+- **Fixed All Broken Documentation Links**: Resolved 17 broken cross-links across 6 documentation files
+  - Removed incorrect `/docs/` prefix from internal links site-wide
+  - Replaced references to non-existent pages (security.md, testing.md, monitoring.md, examples.md) with valid targets
+
+- **New Documentation Pages**:
+  - Created `docs/performance.md` - Performance optimization guide with code splitting strategy and bundle analysis
+  - Added Jekyll front matter to `bundle-analysis.md`, `jquery-elimination-complete.md`, `security-headers.md`
+
+### Documentation Content Updates
+
+- **Updated All Dependency Versions**: Aligned documentation with actual package.json versions
+  - Vite 6.3.5 → 7.3.1, Bootstrap 5.3.7 → 5.3.8, Node.js v16 → v18
+  - Removed references to eliminated libraries: jQuery, Morris.js, Select2, jVectorMap, Gauge.js, Ion.RangeSlider
+  - Updated code examples: Select2 → Choices.js, Morris.js → ECharts, jVectorMap → Leaflet
+  - Corrected `manualChunks` configuration examples in configuration.md and deployment.md
+
+### jQuery Reference Cleanup
+
+- **Removed All Stale jQuery References**: Template is fully jQuery-free
+  - Updated HTML comments in 17 production files: "includes jQuery, Bootstrap, and all vendor scripts" → "Bootstrap and vendor scripts"
+  - Fixed outdated `$().DataTable()` reference in tables_dynamic.html to modern `new DataTable('#myTable')`
+  - Renamed "jQuery Smart Wizard" SCSS section comments to "Smart Wizard"
+
+### Page Identifiers
+
+- **Added `page-*` Body Classes**: All 24 pages missing identifiers now have proper `page-*` body classes for CSS targeting
+  - Enables page-specific styling via `body.page-calendar`, `body.page-form-wizards`, etc.
+  - Documented complete reference table in CLAUDE.md
+
+### Cleanup
+
+- Deleted orphaned documentation files: `BOOTSTRAP_MIGRATION_GUIDE.md`, `daterangepicker-fix.md`
+- Deleted stale release files: `JQUERY_ELIMINATION_PLAN.md`, `RELEASE_v2.1.4.md`
+
+---
+
 ## 2.1.4 - 13.01.2026
 
 **UI Polish & Navigation Enhancement Release**

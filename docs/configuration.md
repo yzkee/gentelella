@@ -56,10 +56,11 @@ export default defineConfig({
         // Manual chunk splitting for optimal loading
         manualChunks: {
           'vendor-core': ['bootstrap', '@popperjs/core'],
-          'vendor-charts': ['chart.js', 'morris.js'],
-          'vendor-forms': ['select2', 'tempus-dominus'],
-          'vendor-tables': ['datatables.net'],
-          'vendor-utils': ['dayjs', 'nprogress']
+          'vendor-chartjs': ['chart.js'],
+          'vendor-echarts': ['echarts'],
+          'vendor-forms': ['choices.js', 'nouislider', '@eonasdan/tempus-dominus'],
+          'vendor-tables': ['datatables.net', 'datatables.net-bs5'],
+          'vendor-utils': ['dayjs', 'skycons']
         }
       }
     },
@@ -331,15 +332,15 @@ export function initializeCharts() {
 import { DateTime } from 'tempus-dominus';
 
 export const formConfig = {
-  // Select2 configuration
-  select2: {
-    theme: 'bootstrap-5',
-    width: '100%',
-    placeholder: 'Select an option...',
-    allowClear: true
+  // Choices.js configuration
+  choices: {
+    searchEnabled: true,
+    removeItemButton: true,
+    placeholder: true,
+    placeholderValue: 'Select an option...'
   },
-  
-  // Date picker configuration
+
+  // Date picker configuration (Tempus Dominus)
   datePicker: {
     display: {
       theme: 'light',
@@ -355,32 +356,18 @@ export const formConfig = {
     localization: {
       format: 'MM/dd/yyyy'
     }
-  },
-  
-  // Validation rules
-  validation: {
-    errorClass: 'is-invalid',
-    successClass: 'is-valid',
-    errorElement: 'div',
-    errorPlacement: function(error, element) {
-      error.addClass('invalid-feedback');
-      element.closest('.form-group').append(error);
-    }
   }
 };
 
 export function initializeForms() {
-  // Initialize Select2
-  $('.select2').select2(formConfig.select2);
-  
-  // Initialize date pickers
-  $('.datepicker').each(function() {
-    new DateTime(this, formConfig.datePicker);
+  // Initialize Choices.js dropdowns
+  document.querySelectorAll('.choices-select').forEach(el => {
+    new Choices(el, formConfig.choices);
   });
-  
-  // Initialize form validation
-  $('form[data-validate]').each(function() {
-    $(this).validate(formConfig.validation);
+
+  // Initialize date pickers
+  document.querySelectorAll('.datepicker').forEach(el => {
+    new DateTime(el, formConfig.datePicker);
   });
 }
 ```
@@ -456,38 +443,44 @@ export default defineConfig({
           // Core vendor libraries (loaded on every page)
           'vendor-core': [
             'bootstrap',
-            '@popperjs/core',
-            'jquery'
+            '@popperjs/core'
           ],
-          
+
           // Chart libraries (loaded only on chart pages)
-          'vendor-charts': [
-            'chart.js',
-            'morris.js',
-            'gauge.js',
-            'jquery-sparkline'
+          'vendor-chartjs': ['chart.js'],
+          'vendor-echarts': ['echarts'],
+
+          // Map and calendar (loaded on specific pages)
+          'vendor-maps': ['leaflet'],
+          'vendor-calendar': [
+            '@fullcalendar/core',
+            '@fullcalendar/daygrid',
+            '@fullcalendar/timegrid',
+            '@fullcalendar/interaction'
           ],
-          
+
           // Form enhancement libraries
           'vendor-forms': [
-            'select2',
-            'tempus-dominus',
-            'ion-rangeslider',
-            'switchery'
+            'choices.js',
+            'nouislider',
+            '@eonasdan/tempus-dominus'
           ],
-          
+
           // Table functionality
           'vendor-tables': [
             'datatables.net',
-            'datatables.net-bs5',
+            'datatables.net-bs5'
+          ],
+          'vendor-tables-ext': [
+            'jszip',
+            'datatables.net-buttons',
             'datatables.net-responsive'
           ],
-          
+
           // Utility libraries
           'vendor-utils': [
             'dayjs',
-            'nprogress',
-            'autosize'
+            'skycons'
           ]
         }
       }

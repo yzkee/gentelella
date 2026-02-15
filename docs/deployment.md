@@ -96,10 +96,11 @@ export default defineConfig({
         // Manual chunk splitting for optimal loading
         manualChunks: {
           'vendor-core': ['bootstrap', '@popperjs/core'],
-          'vendor-charts': ['chart.js', 'morris.js'],
-          'vendor-forms': ['select2', 'tempus-dominus'],
-          'vendor-tables': ['datatables.net'],
-          'vendor-utils': ['dayjs', 'nprogress']
+          'vendor-chartjs': ['chart.js'],
+          'vendor-echarts': ['echarts'],
+          'vendor-forms': ['choices.js', 'nouislider', '@eonasdan/tempus-dominus'],
+          'vendor-tables': ['datatables.net', 'datatables.net-bs5'],
+          'vendor-utils': ['dayjs', 'skycons']
         }
       }
     }

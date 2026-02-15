@@ -25,8 +25,8 @@ Gentelella is a modern, powerful, and completely free Bootstrap 5 admin template
 
 - **🚀 90% smaller initial bundle** (779KB → 79KB)
 - **⚡ 40-70% faster page loads** with intelligent code splitting
-- **📦 Modern Build System** with Vite 6.3.5
-- **🎨 Bootstrap 5.3.7** with updated design system
+- **📦 Modern Build System** with Vite 7.3
+- **🎨 Bootstrap 5.3.8** with updated design system
 - **🧩 Smart Module Loading** - Load only what you need
 - **📱 Mobile-First** responsive design
 
@@ -44,7 +44,7 @@ Gentelella is a modern, powerful, and completely free Bootstrap 5 admin template
 ## Quick Start
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v16 or higher)
+- [Node.js](https://nodejs.org/) (v18 or higher)
 - npm, yarn, or pnpm package manager
 
 ### Installation
@@ -83,10 +83,10 @@ yarn add gentelella
 - **Activity Feeds** - User activity and notifications
 
 ### 📊 Data Visualization
-- **Chart.js Integration** - Modern, responsive charts
-- **Morris.js Charts** - Beautiful time-series graphs
-- **Interactive Maps** - World maps with jVectorMap
-- **Gauge Charts** - Animated gauge displays
+
+- **Chart.js** - Modern, responsive charts
+- **ECharts** - Advanced interactive visualizations
+- **Leaflet Maps** - Interactive maps with markers and layers
 
 ### 📝 Form Components
 - **Multi-step Wizards** - Complex form workflows

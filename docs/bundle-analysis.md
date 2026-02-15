@@ -34,18 +34,22 @@ The default treemap view shows:
 ### Key Metrics to Monitor
 
 1. **Vendor Chunks** (largest bundles):
-   - `vendor-charts` (~1.4MB) - Chart.js, ECharts, Leaflet
-   - `vendor-core` (~168KB) - jQuery, Bootstrap, Popper.js
-   - `vendor-forms` (~128KB) - Select2, Date pickers, Sliders
-   - `vendor-ui` (~100KB) - jQuery UI, DataTables
+   - `vendor-echarts` (~359KB gzip) - ECharts (echarts.html only)
+   - `vendor-calendar` (~74KB gzip) - FullCalendar
+   - `vendor-chartjs` (~68KB gzip) - Chart.js
+   - `vendor-tables` (~63KB gzip) - DataTables core
+   - `vendor-tables-ext` (~49KB gzip) - DataTables extensions + JSZip
+   - `vendor-forms` (~49KB gzip) - Choices.js, nouislider, Tempus Dominus
+   - `vendor-maps` (~42KB gzip) - Leaflet
+   - `vendor-core` (~23KB gzip) - Bootstrap, Popper.js
 
 2. **Application Code**:
-   - `init` (~54KB) - Main initialization code
-   - Page-specific bundles (2-3KB each)
+   - `main-core` - Core entry point (jQuery-free)
+   - Page-specific bundles (dynamically loaded)
 
 3. **CSS Bundles**:
-   - `init.css` (~510KB) - Main stylesheet bundle
-   - Page-specific CSS (4-67KB each)
+   - Main stylesheet bundle
+   - Page-specific CSS
 
 ## Optimization Strategies
 
@@ -61,10 +65,14 @@ The default treemap view shows:
 
 ### 3. Code Splitting Optimization
 Current manual chunks are optimized for:
-- **vendor-core**: Essential libraries loaded on every page
-- **vendor-charts**: Chart functionality (loaded only on chart pages)
-- **vendor-forms**: Form enhancements (loaded only on form pages)
-- **vendor-ui**: UI components (loaded as needed)/
+
+- **vendor-core**: Bootstrap + Popper.js loaded on every page
+- **vendor-chartjs**: Chart.js (loaded only on chart pages)
+- **vendor-echarts**: ECharts (loaded only on echarts.html)
+- **vendor-forms**: Choices.js, nouislider, Tempus Dominus (form pages)
+- **vendor-tables**: DataTables core (table pages)
+- **vendor-maps**: Leaflet (map page only)
+- **vendor-calendar**: FullCalendar (calendar page only)
 
 ### 4. Dynamic Import Opportunities
 Consider converting large features to dynamic imports:
@@ -81,18 +89,21 @@ if (document.querySelector('.chart-container')) {
 ## Performance Targets
 
 ### Current Performance (as of latest build):
-- **JavaScript Total**: ~2.4MB uncompressed, ~800KB gzipped
-- **CSS Total**: ~610KB uncompressed, ~110KB gzipped
-- **Page Load Impact**: Core bundle (168KB) loads on every page
+
+- **Initial Bundle**: 79KB (core + styles)
+- **Total Page Load**: ~770KB (dashboard with all widgets)
+- **Page Load Impact**: Core bundle (~23KB gzip) loads on every page
 
 ### Recommended Targets:
-- **Core Bundle**: <200KB (currently 168KB ✅)
-- **Feature Bundles**: <150KB each (charts: 1.4MB ❌)
-- **Total Initial Load**: <300KB gzipped (currently ~150KB ✅)
+
+- **Core Bundle**: <50KB gzip (currently ~23KB ✅)
+- **Feature Bundles**: <100KB gzip each (echarts: ~359KB ⚠️ - isolated to single page)
+- **Total Initial Load**: <100KB gzipped (currently ~79KB ✅)
 
 ## Bundle Size Warnings
 
 The build process will warn about chunks larger than 1000KB:
-- This is currently triggered by the `vendor-charts` bundle
+
+- This is currently triggered by the `vendor-echarts` bundle (~1,109KB uncompressed)
 - Consider splitting chart libraries further or using dynamic imports
 - Adjust the warning limit in `vite.config.js` if needed

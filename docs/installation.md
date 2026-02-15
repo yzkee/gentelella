@@ -24,7 +24,7 @@ Complete installation and setup instructions for Gentelella Admin Template
 
 Before installing Gentelella, ensure you have the following installed:
 
-- **Node.js** (v16 or higher) - [Download here](https://nodejs.org/)
+- **Node.js** (v18 or higher) - [Download here](https://nodejs.org/)
 - **npm** (comes with Node.js) or **yarn** package manager
 - **Git** (for cloning the repository)
 - A modern code editor (VS Code recommended)

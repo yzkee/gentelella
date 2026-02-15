@@ -1174,7 +1174,7 @@ class FormBuilder {
     
     if (config.multiple) {
       select.multiple = true;
-      select.className += ' select2';
+      select.className += ' choices-select';
     }
     
     if (config.placeholder) {

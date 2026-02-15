@@ -159,76 +159,34 @@ const pieChart = new Chart(ctx, {
 });
 ```
 
-### Morris.js Charts
+### ECharts
 
-#### Line Charts
 ```javascript
-Morris.Line({
-  element: 'line-chart',
-  data: [
-    { y: '2023-01', a: 100, b: 90 },
-    { y: '2023-02', a: 75,  b: 65 },
-    { y: '2023-03', a: 50,  b: 40 }
-  ],
-  xkey: 'y',
-  ykeys: ['a', 'b'],
-  labels: ['Series A', 'Series B']
+import * as echarts from 'echarts';
+
+const chart = echarts.init(document.getElementById('echart-line'));
+chart.setOption({
+  xAxis: { type: 'category', data: ['Jan', 'Feb', 'Mar', 'Apr', 'May'] },
+  yAxis: { type: 'value' },
+  series: [{
+    data: [820, 932, 901, 934, 1290],
+    type: 'line',
+    smooth: true
+  }]
 });
 ```
 
-#### Area Charts
-```javascript
-Morris.Area({
-  element: 'area-chart',
-  data: [
-    { period: '2023-01', sales: 2666, downloads: 2647 },
-    { period: '2023-02', sales: 2778, downloads: 2294 }
-  ],
-  xkey: 'period',
-  ykeys: ['sales', 'downloads'],
-  labels: ['Sales', 'Downloads']
-});
-```
-
-### Sparkline Charts
+#### Gauge Charts
 
 ```javascript
-$('.sparkline').sparkline([5,6,7,2,0,-4,-2,4], {
-  type: 'line',
-  width: '100%',
-  height: '30',
-  lineColor: '#26B99A',
-  fillColor: 'rgba(38, 185, 154, 0.3)'
+const gauge = echarts.init(document.getElementById('echart-gauge'));
+gauge.setOption({
+  series: [{
+    type: 'gauge',
+    detail: { formatter: '{value}%' },
+    data: [{ value: 67, name: 'Progress' }]
+  }]
 });
-```
-
-### Gauge Charts
-
-```javascript
-import Gauge from 'gauge.js';
-
-const gauge = new Gauge(document.getElementById('gauge')).setOptions({
-  angle: 0.15,
-  lineWidth: 0.2,
-  radiusScale: 1,
-  pointer: {
-    length: 0.6,
-    strokeWidth: 0.035,
-    color: '#000000'
-  },
-  limitMax: false,
-  limitMin: false,
-  colorStart: '#6FADCF',
-  colorStop: '#8FC0DA',
-  strokeColor: '#E0E0E0',
-  generateGradient: true,
-  highDpiSupport: true
-});
-
-gauge.maxValue = 100;
-gauge.setMinValue(0);
-gauge.animationSpeed = 32;
-gauge.set(67);
 ```
 
 ---
@@ -263,9 +221,10 @@ gauge.set(67);
 
 ### Advanced Form Components
 
-#### Select2 Enhanced Dropdowns
+#### Choices.js Enhanced Dropdowns
+
 ```html
-<select class="form-control select2" multiple="multiple">
+<select class="form-control choices-select" multiple>
   <option value="AK">Alaska</option>
   <option value="HI">Hawaii</option>
   <option value="CA">California</option>
@@ -273,11 +232,13 @@ gauge.set(67);
 ```
 
 ```javascript
-// Initialize Select2
-$('.select2').select2({
-  theme: 'bootstrap-5',
-  width: '100%',
-  placeholder: 'Select options...'
+import Choices from 'choices.js';
+
+new Choices('.choices-select', {
+  removeItemButton: true,
+  searchEnabled: true,
+  placeholder: true,
+  placeholderValue: 'Select options...'
 });
 ```
 
@@ -669,58 +630,40 @@ animateProgress('.progress-bar', 85);
 
 ## Map Components
 
-### jVectorMap Integration
+### Leaflet Maps
 
-#### World Map
+#### Basic Map
+
 ```html
-<div id="world-map" style="height: 400px;"></div>
+<div id="map" style="height: 400px;"></div>
 ```
 
 ```javascript
-$('#world-map').vectorMap({
-  map: 'world_mill',
-  backgroundColor: 'transparent',
-  regionStyle: {
-    initial: {
-      fill: '#73879C',
-      "fill-opacity": 1,
-      stroke: '#fff',
-      "stroke-width": 1,
-      "stroke-opacity": 1
-    }
-  },
-  series: {
-    regions: [{
-      values: {
-        "US": 298,
-        "SA": 200,
-        "AU": 760,
-        "IN": 2000000,
-        "GB": 120
-      },
-      scale: ['#26B99A', '#E74C3C'],
-      normalizeFunction: 'polynomial'
-    }]
-  }
-});
+import L from 'leaflet';
+
+const map = L.map('map').setView([51.505, -0.09], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+L.marker([51.5, -0.09]).addTo(map)
+  .bindPopup('Hello from Leaflet!')
+  .openPopup();
 ```
 
-#### Regional Map
+#### Map with Multiple Markers
+
 ```javascript
-$('#usa-map').vectorMap({
-  map: 'us_aea',
-  backgroundColor: 'transparent',
-  regionsSelectable: true,
-  series: {
-    regions: [{
-      values: {
-        "US-CA": 200,
-        "US-TX": 300,
-        "US-NY": 250
-      },
-      scale: ['#3498DB', '#E74C3C']
-    }]
-  }
+const locations = [
+  { lat: 40.7128, lng: -74.006, label: 'New York' },
+  { lat: 34.0522, lng: -118.2437, label: 'Los Angeles' },
+  { lat: 41.8781, lng: -87.6298, label: 'Chicago' }
+];
+
+locations.forEach(loc => {
+  L.marker([loc.lat, loc.lng]).addTo(map)
+    .bindPopup(loc.label);
 });
 ```
 
